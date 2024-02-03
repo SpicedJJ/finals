@@ -1,0 +1,48 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    <image alt="logo" width="70" height="70" class="d-inline-block align-text-top"
+        src="{% static 'images/new.ico' %}"></image>
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="{% url 'servicePage' %}">Service</a>
+            <a href="{% url 'aboutPage' %}">Appointment</a>
+            <a href="{% url 'contactPage' %}">Contact</a>
+
+            {% if user.is_authenticated %}
+                <a href="{% url 'appointment_list' %}">List</a>
+                <a href="{% url 'logout' %}">Log out</a>
+            {% else %}
+                <a href="{% url 'loginPage' %}">Log in</a>
+            {% endif %}
+        </nav>
+
+        <style>
+            body {
+                background-image: linear-gradient(to right, gainsboro, gray);
+                background-image: url("https://cdn.outsideonline.com/wp-content/uploads/2023/04/GettyImages-482699418-scaled.jpg");
+            }
+
+            img {
+                max-width: 50%;
+                height: auto;
+            }
+
+            h1 {
+                word-spacing: 0;
+            }
+        </style>
+
+        <h1>Prime Movers Wellness Clinic</h1>
+        <span class="navbarNavAltMarkup">
+        </span>
+    </div>
+</nav>
