@@ -1,0 +1,38 @@
+    p {
+            color: white;
+            font-size: large;
+        
+        }
+        
+        h1 {
+            color: white;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: -1px;
+            background-color: #2b3035;
+            position: relative;
+            left: -180px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+           
+                
+        }
+        
+        nav {
+            word-spacing: 15px;
+            padding-left: 20px;
+        }
+
+        img {
+            
+            margin-left: 20px;
+        }
+
+        nav a {
+            word-spacing: 1px;
+        }
+
+        
